@@ -24,11 +24,11 @@ public class Cliente {
     @Column
     private Integer idade;
 
-//    public Cliente(String cpf, String nome, Integer idade) {
-//        this.cpf = cpf;
-//        this.nome = nome;
-//        this.idade = idade;
-//    }
+    public Cliente(String cpf, String nome, Integer idade) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.idade = idade;
+    }
 
     @Override
     public boolean equals(Object o) {
