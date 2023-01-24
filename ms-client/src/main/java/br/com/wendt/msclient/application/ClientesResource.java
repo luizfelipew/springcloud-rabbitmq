@@ -1,25 +1,26 @@
 package br.com.wendt.msclient.application;
 
 import br.com.wendt.msclient.application.representation.ClienteSaveRequest;
-import br.com.wendt.msclient.domain.Cliente;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("clientes")
+@Slf4j
 public class ClientesResource {
 
     private final ClienteService service;
 
     @GetMapping
     public String status() {
+        log.info("Obtendo o status do microservice de clientes");
         return "ok";
     }
 
